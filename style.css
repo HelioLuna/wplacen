@@ -159,7 +159,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   margin: 1em 0;
 }
@@ -1606,7 +1606,7 @@ a:hover, a:focus, a:active {
 10.1 Site Main
 --------------------------------------------------------------*/
 .site-branding {
-  min-height: 135px;
+  height: auto;
 }
 
 .site-title {
@@ -2300,3 +2300,50 @@ object {
 .gallery-caption {
   display: block;
 }
+
+.logo {
+  cursor: pointer;
+  float: left;
+  max-width: 90% !important;
+  padding: 10px 0 0 0;
+}
+#barra-governo{
+  background: url('images/header_bg-governo.png');
+  background-repeat: repeat-x;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+#barra-governo-content{
+  height: 52px;
+}
+
+#barra-governo-block{
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 990px;
+  margin:auto;
+}
+
+#barra-governo-block .logo {
+  cursor: pointer;
+  float: left;
+  max-width: 90% !important;
+  padding: 10px 0 0 0;
+}
+
+
+.titulo_site{
+  float : left;
+  color : #FFF;
+  margin-left:30px;
+}
+.titulo_site h1{
+  padding: 0;
+  margin: 0;
+}
+.titulo_site h5{
+  padding:10px 0px 0px 0px;
+  margin: 0;
+}
+
