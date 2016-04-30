@@ -101,10 +101,3 @@
 	<div id="content" class="site-content">
 		<div class="container">
 
-	<?php 
-		if ( is_front_page() ) {
-			if ( get_theme_mod( 'display_slider', 1 ) == '1' ) {
-				awaken_featured_posts();
-			}
-		}
-	?>
