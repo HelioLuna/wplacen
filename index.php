@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			conteúdo
+			CONTEÚDO AQUI
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .bootstrap cols -->
