@@ -15,14 +15,16 @@ get_header(); ?>
 <div class="row">
 	<?php is_rtl() ? $rtl = 'awaken-rtl' : $rtl = ''; ?>
 	<div class="col-xs-12 col-sm-12 col-md-8 <?php echo $rtl ?>">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .bootstrap cols -->
-<div class="col-xs-12 col-sm-6 col-md-4">
-	<?php get_sidebar(); ?>
-</div><!-- .bootstrap cols -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- .bootstrap cols -->
+	<?php if (!is_front_page()) {?>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<?php get_sidebar(); ?>
+		</div><!-- .bootstrap cols -->
+	<?php } ?>
 </div><!-- .row -->
 <?php get_footer(); ?>
