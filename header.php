@@ -46,7 +46,7 @@
 			<div id="barra-governo-content">
 				<div id="barra-governo-block">
 					<div class="logo">
-						<a href="<?php echo bloginfo('url')?>" ><img src="<?php bloginfo('template_directory'); ?>/iaages/s5_logo.alagoas.png" alt="Lacen" /></a>
+						<a href="<?php echo bloginfo('url')?>" ><img src="<?php bloginfo('template_directory'); ?>/images/s5_logo.alagoas.png" alt="Lacen" /></a>
 					</div>
 					<div class = "titulo_site">
 						<h1>LACEN</h1>
