@@ -49,8 +49,8 @@
 						<a href="<?php echo bloginfo('url')?>" ><img src="<?php bloginfo('template_directory'); ?>/images/s5_logo.alagoas.png" alt="Lacen" /></a>
 					</div>
 					<div class = "titulo_site">
-						<h1>LACEN</h1>
-						<h5>Laboratório Central de Alagoas</h5>
+						<h1>SECRETARIA DE ESTADO DA SAÚDE</h1>
+						<h5>Governo do Estado de Alagoas</h5>
 					</div>
 				</div>
 			</div>
