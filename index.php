@@ -18,6 +18,41 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
+				<div id="campanha">
+
+				</div>
+				<div id="slide-destaque">
+
+				</div>
+				<!-- ABAIXO -->
+				<div id="tabs-noticias">
+
+				</div>
+
+				<div id="artigo">
+
+				</div>
+
+				<div id="servicos-lacen">
+
+				</div>
+				<!-- ABAIXO -->
+
+				<div id="redes-lacen">
+
+				</div>
+
+				<div id="banner"></div>
+
+				<div id="multimidia">
+
+				</div>
+				<!-- ABAIXO -->
+
+				<div id="banner-footer">
+
+				</div>
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- .bootstrap cols -->
