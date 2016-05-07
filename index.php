@@ -221,17 +221,11 @@ get_header(); ?>
 							<a href="<?php echo $link->link_url ?>" target="<?php echo $link->link_target ?>">
 								<img src="<?php echo $link->link_image ?>" />
 							</a>
-
 							<?php
-
 						}
 						?>
-
 					</div>
-
 					<?php echo do_shortcode('[tabbyending]'); ?>
-
-
 				</div>
 				<!-- ABAIXO -->
 
