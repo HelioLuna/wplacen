@@ -2347,3 +2347,30 @@ object {
   margin: 0;
 }
 
+#tabs-noticias{
+  width: 400px;
+}
+
+#bt-unidades ul li {
+  display: inline-block;
+}
+
+
+#bt-unidades img{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+
+}
+
+#bt-unidades img:hover{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+#bt-unidades img.active{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
