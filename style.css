@@ -2374,3 +2374,21 @@ object {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
+
+#artigo{
+  height: auto;
+  width: 250px;
+  float: left;
+  margin:0;
+}
+
+#servicos-lacen{
+  width: 250px;
+  float:left;
+  padding: 0px 10px 0px 10px;
+}
+#servicos-lacen-tab{
+  overflow: auto;
+  height: auto;
+  min-height: 100px;
+}

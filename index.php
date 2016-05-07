@@ -197,10 +197,40 @@ get_header(); ?>
 				</div> <!-- FINAL DIV TABS NOTICIAS-->
 
 				<div id="artigo">
+					<?php echo do_shortcode('[tabby title="ARTIGOS"]'); ?>
 
-				</div>
+					<?php query_posts('category_name=artigos&showposts=1'); ?>
+					<div class="post-row">
+						<?php while ( have_posts() ): the_post(); ?>
+							<?php get_template_part('content'); ?>
+						<?php endwhile; ?>
+
+
+					</div>
+					<?php echo do_shortcode('[tabbyending]'); ?>
+				</div><!-- FINAL DIV TABS ARTIGOS-->
 
 				<div id="servicos-lacen">
+					<?php echo do_shortcode('[tabby title="SERVIÇOS"]'); ?>
+					<div id="servicos-lacen-tab">
+						<?php
+						$links = get_bookmarks('category_name=servicos&orderby=rating');
+						foreach($links as $link) {
+							?>
+
+							<a href="<?php echo $link->link_url ?>" target="<?php echo $link->link_target ?>">
+								<img src="<?php echo $link->link_image ?>" />
+							</a>
+
+							<?php
+
+						}
+						?>
+
+					</div>
+
+					<?php echo do_shortcode('[tabbyending]'); ?>
+
 
 				</div>
 				<!-- ABAIXO -->
