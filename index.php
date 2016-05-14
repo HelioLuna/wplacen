@@ -182,17 +182,25 @@ get_header(); ?>
 						?>
 					</div>
 					<?php echo do_shortcode('[tabbyending]'); ?>
-				</div>
+				</div><!-- FINAL DIV TABS SERVIÇOS-->
 				<!-- ABAIXO -->
 
 				<div id="redes-lacen">
+					<?php echo do_shortcode('[tabby title="REDES"]'); ?>
+					<!-- IMAGENS COM LINKS DAS REDES -->
 
-				</div>
+					<?php echo do_shortcode('[tabbyending]'); ?>
+				</div><!-- FINAL DIV TABS REDES-->
 
 				<div id="banner"></div>
+				<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
+				<a href="http://www.saude.al.gov.br/" target="_blank"><img id="SESAU-banner" src="<?php bloginfo('template_directory'); ?>/images/sesau-banner.png" alt="SESAU" title="SESAU"></a>
 
 				<div id="multimidia">
+					<?php echo do_shortcode('[tabby title="MULTIMÍDIA"]'); ?>
+					<!-- desenvolver multimídia -->
 
+					<?php echo do_shortcode('[tabbyending]'); ?>
 				</div>
 
 			</main><!-- #main -->
