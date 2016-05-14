@@ -30,8 +30,8 @@ get_header(); ?>
 
 					<div id="noticias-unidades">
 
-						<!--noticias da sede-->
-						<div id="noticias-sesau">
+						<!--noticias do lacen-->
+						<div id="noticias-lacen">
 
 							<?php query_posts('category_name=noticias&showposts=3'); ?>
 
@@ -45,9 +45,9 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</div>
 
-						<!--div do HGE -->
-						<div id="noticias-hge" style="display:none">
-							<?php query_posts('category_name=noticias-hge&showposts=3'); ?>
+						<!--div arbovirus -->
+						<div id="noticias-arbovirus" style="display:none">
+							<?php query_posts('category_name=noticias-arbovirus&showposts=3'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
@@ -59,9 +59,9 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</div>
 
-						<!--div do SAMU -->
-						<div id="noticias-samu" style="display:none">
-							<?php query_posts('category_name=noticias-samu&showposts=3'); ?>
+						<!--div enteroparasitoses -->
+						<div id="noticias-enteroparasitoses" style="display:none">
+							<?php query_posts('category_name=noticias-enteroparasitoses&showposts=3'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
@@ -73,9 +73,9 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</div>
 
-						<!--div do HEMOAL -->
-						<div id="noticias-hemoal" style="display:none">
-							<?php query_posts('category_name=noticias-hemoal&showposts=3'); ?>
+						<!--div entomologia -->
+						<div id="noticias-entomologia" style="display:none">
+							<?php query_posts('category_name=noticias-entomologia&showposts=3'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
@@ -87,9 +87,9 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</div>
 
-						<!--div do Vigilancia Ambiental -->
-						<div id="noticias-va" style="display:none">
-							<?php query_posts('category_name=noticias-va&showposts=3'); ?>
+						<!--div tuberculose -->
+						<div id="noticias-tuberculose" style="display:none">
+							<?php query_posts('category_name=noticias-tuberculose&showposts=3'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
@@ -101,48 +101,6 @@ get_header(); ?>
 							<?php endwhile; ?>
 						</div>
 
-						<!--div do Atenção Basica -->
-						<div id="noticias-lacen" style="display:none">
-							<?php query_posts('category_name=noticias-lacen&showposts=3'); ?>
-
-							<?php while ( have_posts() ): the_post(); ?>
-
-								<a href="<?php the_permalink() ?>">
-									<h3><?php the_title()?></h3>
-									<p><?php the_excerpt() ?></p>
-								</a>
-
-							<?php endwhile; ?>
-						</div>
-
-
-						<!--div do Vigilância Sanitária -->
-						<div id="noticias-vs" style="display:none">
-							<?php query_posts('category_name=noticias-vs&showposts=3'); ?>
-
-							<?php while ( have_posts() ): the_post(); ?>
-
-								<a href="<?php the_permalink() ?>">
-									<h3><?php the_title()?></h3>
-									<p><?php the_excerpt() ?></p>
-								</a>
-
-							<?php endwhile; ?>
-						</div>
-
-						<!--div do Vigilância Epidemiologica -->
-						<div id="noticias-ve" style="display:none">
-							<?php query_posts('category_name=noticias-ve&showposts=3'); ?>
-
-							<?php while ( have_posts() ): the_post(); ?>
-
-								<a href="<?php the_permalink() ?>">
-									<h3><?php the_title()?></h3>
-									<p><?php the_excerpt() ?></p>
-								</a>
-
-							<?php endwhile; ?>
-						</div>
 
 					</div>
 
@@ -152,14 +110,12 @@ get_header(); ?>
 					<div id="bt-unidades">
 						<ul id="mycarousel" class="jcarousel-skin-tango">
 							<!--botoes das unidades para mostrar as noticias-->
-							<li><img class="apps active" id ="sesau" src="<?php bloginfo('template_directory'); ?>/images/sesau.jpg" alt="SESAU" title="Notícias da SESAU"/></li>
-							<li><img class="apps" id ="hge" src="<?php bloginfo('template_directory'); ?>/images/hge.jpg" alt="HGE" title="Notícias do HGE" /></li>
-							<li><img class="apps" id ="samu" src="<?php bloginfo('template_directory'); ?>/images/samu.jpg" alt="SAMU" title="Notícias do SAMU"/></li>
-							<li><img class="apps" id ="hemoal" src="<?php bloginfo('template_directory'); ?>/images/hemoal.jpg" alt="HEMOAL" title="Notícias do HEMOAL"/></li>
-							<li><img class="apps" id ="va" src="<?php bloginfo('template_directory'); ?>/images/va.jpg" alt="Vigilância Ambiental" title="Notícias da Vigilância Ambiental"/></li>
-							<li><img class="apps" id ="lacen" src="<?php bloginfo('template_directory'); ?>/images/lacen.jpg" alt="LACEN" title="Notícias do LACEN"/></li>
-							<li><img class="apps" id ="vs" src="<?php bloginfo('template_directory'); ?>/images/vs.jpg" alt="Vigilância Sanitária" title="Notícias da Vigilância Sanitária"/></li>
-							<li><img class="apps" id ="ve" src="<?php bloginfo('template_directory'); ?>/images/ve.jpg" alt="Vigilância Epidemiológica" title="Notícias da Vigilância Epidemiológica"/></li>
+							<li><img class="apps active" id ="lacen" src="<?php bloginfo('template_directory'); ?>/images/lacen.jpg" alt="LACEN" title="Notícias do LACEN"/></li>
+							<li><img class="apps" id ="arbovirus" src="<?php bloginfo('template_directory'); ?>/images/arbovirus.jpg" alt="Arbovirus" title="Notícias: Arbovirus" /></li>
+							<li><img class="apps" id ="enteroparasitoses" src="<?php bloginfo('template_directory'); ?>/images/enteroparasitoses.jpg" alt="Enteroparasitoses" title="Notícias: Enteroparasitoses"/></li>
+							<li><img class="apps" id ="entomologia" src="<?php bloginfo('template_directory'); ?>/images/entomologia.jpg" alt="Entomologia" title="Notícias: Entomologia"/></li>
+							<li><img class="apps" id ="tuberculose" src="<?php bloginfo('template_directory'); ?>/images/tuberculose.jpg" alt="Tuberculose" title="Notícias: Tuberculose"/></li>
+
 						</ul>
 					</div>
 
