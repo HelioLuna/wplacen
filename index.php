@@ -23,24 +23,24 @@ get_header(); ?>
 				</div>
 
 				<div style="width: 550px; ">
-				<div id='coin-slider' style="margin:auto">
-					
-							<?php
-					query_posts('category_name=destaque&showposts=5');
-					while (have_posts ()) : the_post();
-						?>
+					<div id='coin-slider' style="margin:auto">
 
-						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail(); ?>
-							<span>
+						<?php
+						query_posts('category_name=destaque&showposts=5');
+						while (have_posts ()) : the_post();
+							?>
+
+							<a href="<?php the_permalink() ?>">
+								<?php the_post_thumbnail(); ?>
+								<span>
                             <h1><?php substr(the_title(), 0, 40); ?></h1>
 								<p><?php echo substr($post->post_excerpt, 0, 130); ?></p>
                         </span>
-						</a>
+							</a>
 
-					<?php endwhile; ?>
-				</div>
+						<?php endwhile; ?>
 					</div>
+				</div>
 				<!-- ABAIXO -->
 
 				<div id="tabs-noticias" style="width: 500px;">
@@ -217,6 +217,18 @@ get_header(); ?>
 				<div id="multimidia">
 					<?php echo do_shortcode('[tabby title="MULTIMÍDIA"]'); ?>
 					<!-- desenvolver multimídia -->
+						<!-- desenvolver multimídia -->
+					<div id="buttons-multimidia">
+
+					</div>
+							<div id="fotos">
+							adasdasdasdas
+						</div>
+
+						<div id="videos">
+							asdasdasds
+
+						</div>
 
 					<?php echo do_shortcode('[tabbyending]'); ?>
 				</div>
