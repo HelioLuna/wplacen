@@ -2375,15 +2375,18 @@ object {
   filter: grayscale(0);
 }
 
-#artigo{
-  height: auto;
-  width: 250px;
+#tabs-noticias{
   float: left;
-  margin:0;
+}
+#artigo{
+  width: 320px;
+  float: left;
+  padding: 0px 10px 0px 10px;
+
 }
 
 #servicos-lacen{
-  width: 250px;
+  width: 320px;
   float:left;
   padding: 0px 10px 0px 10px;
 }
@@ -2391,4 +2394,17 @@ object {
   overflow: auto;
   height: auto;
   min-height: 100px;
+}
+
+
+#bloco1{
+  clear: both;
+  width: 520px;
+  float: left;
+  padding: 0px 20px 0px 0px;
+
+}
+#multimidia{
+  float: left;
+  width: 620px;
 }

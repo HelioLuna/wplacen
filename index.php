@@ -14,7 +14,7 @@
 get_header(); ?>
 <div class="row">
 	<?php is_rtl() ? $rtl = 'awaken-rtl' : $rtl = ''; ?>
-	<div class="col-xs-12 col-sm-12 col-md-8 <?php echo $rtl ?>">
+	<div class="col-xs-12 col-sm-12 <?php echo $rtl ?>">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
@@ -25,7 +25,8 @@ get_header(); ?>
 
 				</div>
 				<!-- ABAIXO -->
-				<div id="tabs-noticias">
+
+				<div id="tabs-noticias" style="width: 500px;">
 					<?php echo do_shortcode('[tabby title="Notícias"]'); ?>
 
 					<div id="noticias-unidades">
@@ -184,18 +185,18 @@ get_header(); ?>
 					<?php echo do_shortcode('[tabbyending]'); ?>
 				</div><!-- FINAL DIV TABS SERVIÇOS-->
 				<!-- ABAIXO -->
+				<div id="bloco1">
+					<div id="redes-lacen">
+						<?php echo do_shortcode('[tabby title="REDES"]'); ?>
+						<!-- IMAGENS COM LINKS DAS REDES -->
 
-				<div id="redes-lacen">
-					<?php echo do_shortcode('[tabby title="REDES"]'); ?>
-					<!-- IMAGENS COM LINKS DAS REDES -->
+						<?php echo do_shortcode('[tabbyending]'); ?>
+					</div><!-- FINAL DIV TABS REDES-->
 
-					<?php echo do_shortcode('[tabbyending]'); ?>
-				</div><!-- FINAL DIV TABS REDES-->
-
-				<div id="banner"></div>
-				<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
-				<a href="http://www.saude.al.gov.br/" target="_blank"><img id="SESAU-banner" src="<?php bloginfo('template_directory'); ?>/images/sesau-banner.png" alt="SESAU" title="SESAU"></a>
-
+					<div id="banner"></div>
+					<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
+					<a href="http://www.saude.al.gov.br/" target="_blank"><img id="SESAU-banner" src="<?php bloginfo('template_directory'); ?>/images/sesau-banner.png" alt="SESAU" title="SESAU"></a>
+				</div>
 				<div id="multimidia">
 					<?php echo do_shortcode('[tabby title="MULTIMÍDIA"]'); ?>
 					<!-- desenvolver multimídia -->
@@ -206,7 +207,7 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- .bootstrap cols -->
-	<?php if (!is_front_page()) {?>
+	<?php if (is_front_page()) {?>
 		<div class="col-xs-12 col-sm-6 col-md-4">
 			<?php get_sidebar(); ?>
 		</div><!-- .bootstrap cols -->
