@@ -21,9 +21,26 @@ get_header(); ?>
 				<div id="campanha">
 
 				</div>
-				<div id="slide-destaque">
 
+				<div style="width: 550px; ">
+				<div id='coin-slider' style="margin:auto">
+					
+							<?php
+					query_posts('category_name=destaque&showposts=5');
+					while (have_posts ()) : the_post();
+						?>
+
+						<a href="<?php the_permalink() ?>">
+							<?php the_post_thumbnail(); ?>
+							<span>
+                            <h1><?php substr(the_title(), 0, 40); ?></h1>
+								<p><?php echo substr($post->post_excerpt, 0, 130); ?></p>
+                        </span>
+						</a>
+
+					<?php endwhile; ?>
 				</div>
+					</div>
 				<!-- ABAIXO -->
 
 				<div id="tabs-noticias" style="width: 500px;">
@@ -214,3 +231,4 @@ get_header(); ?>
 	<?php } ?>
 </div><!-- .row -->
 <?php get_footer(); ?>
+

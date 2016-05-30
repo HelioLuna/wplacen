@@ -13,12 +13,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+
 	<?php wp_head(); ?>
+<!--	<script type="text/javascript" src="--><?php //echo get_bloginfo('template_directory') . "/jquery-1.4.2.min.js" ?><!--"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory') . "/js/coin-slider.min.js" ?>"></script>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/coin-slider-styles.css" type="text/css">
+
 
 </head>
 
 <body <?php body_class(); ?>>
+<script type="text/javascript">
+	$(document).ready(function() { <!--  SLIDE-DESTAQUE: MANIPULAÇÃO -->
+		$('#coin-slider').coinslider({ width: 500, height:300,navigation: true, delay: 4000, sDelay: 1, effect: 'straight' });
+	});
+</script>
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'awaken' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
