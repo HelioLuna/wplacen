@@ -20,6 +20,8 @@ get_header(); ?>
 
 				<div id="campanha">
 
+						<?php echo do_shortcode('[jquery-banner-rotate width=204 height=104 id=2 showpager=false delay=200]'); ?>
+					
 				</div>
 
 				<div style="width: 550px; ">

@@ -16,8 +16,8 @@
 
 
 	<?php wp_head(); ?>
-<!--	<script type="text/javascript" src="--><?php //echo get_bloginfo('template_directory') . "/jquery-1.4.2.min.js" ?><!--"></script>-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--	<script type="text/javascript" src="--><?php //echo get_bloginfo('template_directory') . "/jquery.min.js" ?><!--"></script>-->
+	<script src="<?php echo get_bloginfo('template_directory') . "/js/jquery.min.js" ?>"></script>
 	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory') . "/js/coin-slider.min.js" ?>"></script>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/coin-slider-styles.css" type="text/css">
 
@@ -70,8 +70,11 @@
 			</div>
 
 		</div>
-
 		<div class="container">
+			<div id="logo-lacen">
+				<a href="<?php echo bloginfo('url')?>" ><img src="<?php bloginfo('template_directory'); ?>/images/logo-lacen.png" alt="Lacen" /></a>
+			</div>
+
 			<div class="awaken-navigation-container">
 				<nav id="site-navigation" class="main-navigation cl-effect-10" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'main_navigation' ) ); ?>
