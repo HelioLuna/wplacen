@@ -18,14 +18,12 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-				<div id="campanha">
-
-						<?php echo do_shortcode('[jquery-banner-rotate width=204 height=104 id=2 showpager=false delay=200]'); ?>
-					
+				<div id="campanha" style="width: 500px; float: left">
+					<?php echo do_shortcode('[jquery-banner-rotate width=470 height=300	 id=1 showpager=false delay=200]'); ?>
 				</div>
 
-				<div style="width: 550px; ">
-					<div id='coin-slider' style="margin:auto">
+				<div style="width: 550px; float: left">
+					<div id='coin-slider' style="margin:auto;float: left">
 
 						<?php
 						query_posts('category_name=destaque&showposts=5');
@@ -53,7 +51,7 @@ get_header(); ?>
 						<!--noticias do lacen-->
 						<div id="noticias-lacen">
 
-							<?php query_posts('category_name=noticias&showposts=3'); ?>
+							<?php query_posts('category_name=lacen&showposts=3'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
@@ -63,6 +61,9 @@ get_header(); ?>
 								</a>
 
 							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/lacen/";?>">Mais</a>
+							</span>
 						</div>
 
 						<!--div arbovirus -->
@@ -77,6 +78,9 @@ get_header(); ?>
 								</a>
 
 							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/noticias-arbovirus/";?>">Mais</a>
+							</span>
 						</div>
 
 						<!--div enteroparasitoses -->
@@ -91,6 +95,9 @@ get_header(); ?>
 								</a>
 
 							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/noticias-enteroparasitoses/";?>">Mais</a>
+							</span>
 						</div>
 
 						<!--div entomologia -->
@@ -105,6 +112,9 @@ get_header(); ?>
 								</a>
 
 							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/noticias-entomologia/";?>">Mais</a>
+							</span>
 						</div>
 
 						<!--div tuberculose -->
@@ -119,6 +129,9 @@ get_header(); ?>
 								</a>
 
 							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/noticias-tuberculose/";?>">Mais</a>
+							</span>
 						</div>
 
 
@@ -126,17 +139,17 @@ get_header(); ?>
 
 
 
-					<hr />
+					<hr class="reducaoPad" />
 					<div id="bt-unidades">
-						<ul id="mycarousel" class="jcarousel-skin-tango">
-							<!--botoes das unidades para mostrar as noticias-->
-							<li><img class="apps active" id ="lacen" src="<?php bloginfo('template_directory'); ?>/images/lacen.jpg" alt="LACEN" title="Notícias do LACEN"/></li>
-							<li><img class="apps" id ="arbovirus" src="<?php bloginfo('template_directory'); ?>/images/arbovirus.jpg" alt="Arbovirus" title="Notícias: Arbovirus" /></li>
-							<li><img class="apps" id ="enteroparasitoses" src="<?php bloginfo('template_directory'); ?>/images/enteroparasitoses.jpg" alt="Enteroparasitoses" title="Notícias: Enteroparasitoses"/></li>
-							<li><img class="apps" id ="entomologia" src="<?php bloginfo('template_directory'); ?>/images/entomologia.jpg" alt="Entomologia" title="Notícias: Entomologia"/></li>
-							<li><img class="apps" id ="tuberculose" src="<?php bloginfo('template_directory'); ?>/images/tuberculose.jpg" alt="Tuberculose" title="Notícias: Tuberculose"/></li>
+						<!--						<ul id="mycarousel" class="jcarousel-skin-tango">-->
+						<!--botoes das unidades para mostrar as noticias-->
+						<li><img class="apps active" id ="lacen" src="<?php bloginfo('template_directory'); ?>/images/lacen.jpg" alt="LACEN" title="Notícias do LACEN"/></li>
+						<li><img class="apps" id ="arbovirus" src="<?php bloginfo('template_directory'); ?>/images/arbovirus.jpg" alt="Arbovirus" title="Notícias: Arbovirus" /></li>
+						<li><img class="apps" id ="enteroparasitoses" src="<?php bloginfo('template_directory'); ?>/images/enteroparasitoses.jpg" alt="Enteroparasitoses" title="Notícias: Enteroparasitoses"/></li>
+						<li><img class="apps" id ="entomologia" src="<?php bloginfo('template_directory'); ?>/images/entomologia.jpg" alt="Entomologia" title="Notícias: Entomologia"/></li>
+						<li><img class="apps" id ="tuberculose" src="<?php bloginfo('template_directory'); ?>/images/tuberculose.jpg" alt="Tuberculose" title="Notícias: Tuberculose"/></li>
 
-						</ul>
+						<!--						</ul>-->
 					</div>
 
 					<script>
@@ -219,21 +232,100 @@ get_header(); ?>
 				<div id="multimidia">
 					<?php echo do_shortcode('[tabby title="MULTIMÍDIA"]'); ?>
 					<!-- desenvolver multimídia -->
-						<!-- desenvolver multimídia -->
+
 					<div id="buttons-multimidia">
-
+						<li><img class="bts active" id ="fotos" src="<?php bloginfo('template_directory'); ?>/images/foto.png" alt="Fotos" title="Notícias de Fotos"/></li>
+						<li><img class="bts" id ="videos" src="<?php bloginfo('template_directory'); ?>/images/video.png" alt="Vídeos" title="Notícias de Vídeo" /></li>
 					</div>
-							<div id="fotos">
-							adasdasdasdas
+
+					<hr />
+					<div id="noticias-multimidia">
+						<div id="noticia-fotos">
+							<?php query_posts('category_name=fotos&showposts=3'); ?>
+
+							<?php while ( have_posts() ): the_post(); ?>
+
+								<li>
+									<a href="<?php the_permalink()?>">
+										<div class="image-container">
+											<?php if ( has_post_thumbnail() ) {
+												the_post_thumbnail('thumb-large');
+												$caption = get_post(get_post_thumbnail_id())->post_excerpt;
+												if ( isset($caption) && $caption ) echo '<div class="image-caption">'.$caption.'</div>';
+											} ?>
+										</div>
+										<h3><?php the_title()?></h3>
+									</a>
+								</li>
+
+							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/foto/";?>">Mais</a>
+							</span>
+
 						</div>
 
-						<div id="videos">
-							asdasdasds
+						<div id="noticia-videos" class="invisivel">
+							<?php query_posts('category_name=video&showposts=2'); ?>
+
+							<?php while ( have_posts() ): the_post(); ?>
+
+								<li>
+									<?php
+									echo do_shortcode("[youtube width='210' height='210']" . get_post_meta($post->ID, 'youtube', true) ."[/youtube]");?>
+
+									<h3><a href="<?php the_permalink()?>"><?php the_title()?></a></h3>
+
+								</li>
+
+							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/video/";?>">Mais</a>
+							</span>
+
 
 						</div>
 
-					<?php echo do_shortcode('[tabbyending]'); ?>
+						<?php echo do_shortcode('[tabbyending]'); ?>
+					</div>
 				</div>
+				<script>
+
+
+					$( document ).ready(function() {
+						$(".bts").click( function() {
+
+
+							nome_botao = $(this).attr('id');
+
+							//loop pra esconder os viviveis
+							$("#noticias-multimidia").find("div").each(function (index, element) {
+								//verificar se o display esta none
+
+
+								if ($(element).css("display") == 'block') {
+
+									//esconde
+									$(element).css('display','none');
+
+
+
+								}
+							});
+							$("#noticia-" + nome_botao).css('display', 'block');
+
+							//loop pra remover a Active dos botões
+							$("#buttons-multimidia").find('.bts').each(function(index, element){
+
+								$(element).removeClass('active');
+
+							});
+							$('#' + nome_botao).addClass('active');
+
+
+						})
+					});
+				</script>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

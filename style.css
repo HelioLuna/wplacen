@@ -2357,8 +2357,13 @@ object {
 #tabs-noticias{
   width: 400px;
 }
-
-#bt-unidades ul li {
+.reducaoPad{
+  margin-bottom: 10px;
+}
+#bt-unidades{
+  padding-bottom: 10px;
+}
+#bt-unidades li {
   display: inline-block;
 }
 
@@ -2445,4 +2450,35 @@ padding: 10px 0px 10px 0px ;
 }
 #span-contato{
   font-size: 14px;
+}
+
+#buttons-multimidia li {
+  display: inline-block;
+}
+
+
+#buttons-multimidia img{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+
+}
+
+#buttons-multimidia img:hover{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+#buttons-multimidia img.active{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.invisivel{
+  display:none;
+}
+.span-categoria-right{
+  float:right;
 }
