@@ -2388,16 +2388,23 @@ object {
 
 #tabs-noticias{
   float: left;
+  padding-right: 20px;
+
+}
+
+#multimidia{
+  float: left;
+  width: 580px;
 }
 #artigo{
-  width: 320px;
+  width: 300px;
   float: left;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 0px;
 
 }
 
 #servicos-lacen{
-  width: 320px;
+  width: 300px;
   float:left;
   padding: 0px 10px 0px 10px;
 }
@@ -2414,10 +2421,6 @@ object {
   float: left;
   padding: 0px 20px 0px 0px;
 
-}
-#multimidia{
-  float: left;
-  width: 620px;
 }
 
 .cs-title h1 {

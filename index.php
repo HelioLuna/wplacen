@@ -19,7 +19,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<div id="campanha" style="width: 500px; float: left">
-					<?php echo do_shortcode('[jquery-banner-rotate width=470 height=300	 id=1 showpager=false delay=200]'); ?>
+					<?php echo do_shortcode('[jquery-banner-rotate width=480 height=300	 id=1 showpager=false delay=200]'); ?>
 				</div>
 
 				<div style="width: 550px; float: left">
@@ -34,7 +34,7 @@ get_header(); ?>
 								<?php the_post_thumbnail(); ?>
 								<span>
                             <h1><?php substr(the_title(), 0, 40); ?></h1>
-<!--								<p>--><?php //echo substr($post->post_excerpt, 0, 130); ?><!--</p>-->
+									<!--								<p>--><?php //echo substr($post->post_excerpt, 0, 130); ?><!--</p>-->
                         </span>
 							</a>
 
@@ -43,7 +43,7 @@ get_header(); ?>
 				</div>
 				<!-- ABAIXO -->
 
-				<div id="tabs-noticias" style="width: 500px;">
+				<div id="tabs-noticias" style="width: 550px;">
 					<?php echo do_shortcode('[tabby title="Notícias"]'); ?>
 
 					<div id="noticias-unidades">
@@ -184,51 +184,6 @@ get_header(); ?>
 					<?php echo do_shortcode('[tabbyending]'); ?>
 
 				</div> <!-- FINAL DIV TABS NOTICIAS-->
-
-				<div id="artigo">
-					<?php echo do_shortcode('[tabby title="ARTIGOS"]'); ?>
-
-					<?php query_posts('category_name=artigos&showposts=1'); ?>
-					<div class="post-row">
-						<?php while ( have_posts() ): the_post(); ?>
-							<?php get_template_part('content'); ?>
-						<?php endwhile; ?>
-
-
-					</div>
-					<?php echo do_shortcode('[tabbyending]'); ?>
-				</div><!-- FINAL DIV TABS ARTIGOS-->
-
-				<div id="servicos-lacen">
-					<?php echo do_shortcode('[tabby title="SERVIÇOS"]'); ?>
-					<div id="servicos-lacen-tab">
-						<?php
-						$links = get_bookmarks('category_name=servicos&orderby=rating');
-						foreach($links as $link) {
-							?>
-
-							<a href="<?php echo $link->link_url ?>" target="<?php echo $link->link_target ?>">
-								<img src="<?php echo $link->link_image ?>" />
-							</a>
-							<?php
-						}
-						?>
-					</div>
-					<?php echo do_shortcode('[tabbyending]'); ?>
-				</div><!-- FINAL DIV TABS SERVIÇOS-->
-				<!-- ABAIXO -->
-				<div id="bloco1">
-					<div id="redes-lacen">
-						<?php echo do_shortcode('[tabby title="REDES"]'); ?>
-						<!-- IMAGENS COM LINKS DAS REDES -->
-
-						<?php echo do_shortcode('[tabbyending]'); ?>
-					</div><!-- FINAL DIV TABS REDES-->
-
-					<div id="banner"></div>
-					<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
-					<a href="http://www.saude.al.gov.br/" target="_blank"><img id="SESAU-banner" src="<?php bloginfo('template_directory'); ?>/images/sesau-banner.png" alt="SESAU" title="SESAU"></a>
-				</div>
 				<div id="multimidia">
 					<?php echo do_shortcode('[tabby title="MULTIMÍDIA"]'); ?>
 					<!-- desenvolver multimídia -->
@@ -289,6 +244,52 @@ get_header(); ?>
 						<?php echo do_shortcode('[tabbyending]'); ?>
 					</div>
 				</div>
+
+				<!-- ABAIXO -->
+				<div id="bloco1">
+					<div id="redes-lacen">
+						<?php echo do_shortcode('[tabby title="REDES"]'); ?>
+						<!-- IMAGENS COM LINKS DAS REDES -->
+
+						<?php echo do_shortcode('[tabbyending]'); ?>
+					</div><!-- FINAL DIV TABS REDES-->
+
+					<div id="banner"></div>
+					<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
+					<a href="http://www.saude.al.gov.br/" target="_blank"><img id="SESAU-banner" src="<?php bloginfo('template_directory'); ?>/images/sesau-banner.png" alt="SESAU" title="SESAU"></a>
+				</div>
+				<div id="artigo">
+					<?php echo do_shortcode('[tabby title="ARTIGOS"]'); ?>
+
+					<?php query_posts('category_name=artigos&showposts=1'); ?>
+					<div class="post-row">
+						<?php while ( have_posts() ): the_post(); ?>
+							<?php get_template_part('content'); ?>
+						<?php endwhile; ?>
+
+
+					</div>
+					<?php echo do_shortcode('[tabbyending]'); ?>
+				</div><!-- FINAL DIV TABS ARTIGOS-->
+
+				<div id="servicos-lacen">
+					<?php echo do_shortcode('[tabby title="SERVIÇOS"]'); ?>
+					<div id="servicos-lacen-tab">
+						<?php
+						$links = get_bookmarks('category_name=servicos&orderby=rating');
+						foreach($links as $link) {
+							?>
+
+							<a href="<?php echo $link->link_url ?>" target="<?php echo $link->link_target ?>">
+								<img src="<?php echo $link->link_image ?>" />
+							</a>
+							<?php
+						}
+						?>
+					</div>
+					<?php echo do_shortcode('[tabbyending]'); ?>
+				</div><!-- FINAL DIV TABS SERVIÇOS-->
+
 				<script>
 
 

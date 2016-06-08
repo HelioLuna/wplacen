@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 <script type="text/javascript">
 	$(document).ready(function() { <!--  SLIDE-DESTAQUE: MANIPULAÇÃO -->
-		$('#coin-slider').coinslider({ width: 500, height:300,navigation: true, delay: 4000, sDelay: 1, effect: 'straight' });
+		$('#coin-slider').coinslider({ width: 550, height:300,navigation: true, delay: 4000, sDelay: 1, effect: 'straight' });
 	});
 </script>
 
