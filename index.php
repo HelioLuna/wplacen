@@ -34,7 +34,7 @@ get_header(); ?>
 								<?php the_post_thumbnail(); ?>
 								<span>
                             <h1><?php substr(the_title(), 0, 40); ?></h1>
-								<p><?php echo substr($post->post_excerpt, 0, 130); ?></p>
+<!--								<p>--><?php //echo substr($post->post_excerpt, 0, 130); ?><!--</p>-->
                         </span>
 							</a>
 
@@ -266,7 +266,7 @@ get_header(); ?>
 						</div>
 
 						<div id="noticia-videos" class="invisivel">
-							<?php query_posts('category_name=video&showposts=2'); ?>
+							<?php query_posts('category_name=videos&showposts=2'); ?>
 
 							<?php while ( have_posts() ): the_post(); ?>
 
