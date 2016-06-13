@@ -281,8 +281,9 @@ get_header(); ?>
 						}
 						?>
 
-						<?php echo do_shortcode('[tabbyending]'); ?>
-					</div><!-- FINAL DIV TABS REDES-->
+					</div>
+					<?php echo do_shortcode('[tabbyending]'); ?>
+				</div><!-- FINAL DIV TABS REDES-->
 
 					<div id="banner"></div>
 					<a href="https://lacen.al.gov.br/gal/" target="_blank"><img id="GAL-banner" src="<?php bloginfo('template_directory'); ?>/images/gal-banner.png" alt="GAL" title="GAL"></a>
