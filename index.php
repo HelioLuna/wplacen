@@ -267,6 +267,20 @@ get_header(); ?>
 						<?php echo do_shortcode('[tabby title="REDES"]'); ?>
 						<!-- IMAGENS COM LINKS DAS REDES -->
 
+						<?php
+						$links = get_bookmarks('category_name=redes&orderby=rating');
+						foreach($links as $link) {
+							?>
+
+							<a href="<?php echo $link->link_url ?>" target="<?php echo $link->link_target ?>">
+								<img src="<?php echo $link->link_image ?>" />
+							</a>
+
+							<?php
+
+						}
+						?>
+
 						<?php echo do_shortcode('[tabbyending]'); ?>
 					</div><!-- FINAL DIV TABS REDES-->
 
