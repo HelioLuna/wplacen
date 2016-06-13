@@ -19,7 +19,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<div id="campanha" style="width: 500px; float: left">
-					<?php echo do_shortcode('[jquery-banner-rotate width=480 height=300	 id=1 showpager=false delay=200]'); ?>
+					<?php echo do_shortcode('[jquery-banner-rotat  e width=480 height=300	 id=1 showpager=false delay=200]'); ?>
 				</div>
 
 				<div style="width: 550px; float: left">
@@ -133,7 +133,22 @@ get_header(); ?>
 								<a href="<?php echo bloginfo(url)."/category/noticias-tuberculose/";?>">Mais</a>
 							</span>
 						</div>
+						<!--div qualidade da água -->
+						<div id="noticias-qualidade-agua" style="display:none">
+							<?php query_posts('category_name=noticias-tuberculose&showposts=3'); ?>
 
+							<?php while ( have_posts() ): the_post(); ?>
+
+								<a href="<?php the_permalink() ?>">
+									<h3><?php the_title()?></h3>
+									<p><?php the_excerpt() ?></p>
+								</a>
+
+							<?php endwhile; ?>
+							<span class="span-categoria-right">
+								<a href="<?php echo bloginfo(url)."/category/noticias-tuberculose/";?>">Mais</a>
+							</span>
+						</div>
 
 					</div>
 
@@ -148,6 +163,7 @@ get_header(); ?>
 						<li><img class="apps" id ="enteroparasitoses" src="<?php bloginfo('template_directory'); ?>/images/enteroparasitoses.jpg" alt="Enteroparasitoses" title="Notícias: Enteroparasitoses"/></li>
 						<li><img class="apps" id ="entomologia" src="<?php bloginfo('template_directory'); ?>/images/entomologia.jpg" alt="Entomologia" title="Notícias: Entomologia"/></li>
 						<li><img class="apps" id ="tuberculose" src="<?php bloginfo('template_directory'); ?>/images/tuberculose.jpg" alt="Tuberculose" title="Notícias: Tuberculose"/></li>
+						<li><img class="apps" id ="qualidade-agua" src="<?php bloginfo('template_directory'); ?>/images/qualidade-agua.jpg" alt="Qualidade da Água" title="Notícias: Qualidade da Água"/></li>
 
 						<!--						</ul>-->
 					</div>
