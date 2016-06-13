@@ -19,7 +19,7 @@ get_header(); ?>
 			<main id="main" class="site-main" role="main">
 
 				<div id="campanha" style="width: 500px; float: left">
-					<?php echo do_shortcode('[jquery-banner-rotat  e width=480 height=300	 id=1 showpager=false delay=200]'); ?>
+					<?php echo do_shortcode('[jquery-banner-rotate width=480 height=300	 id=1 showpager=false delay=200]'); ?>
 				</div>
 
 				<div style="width: 550px; float: left">
